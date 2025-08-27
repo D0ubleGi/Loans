@@ -56,6 +56,7 @@
         height: 100vh;
         width: 100vw;
         overflow: hidden;
+        background-image: url('./assets/images/wallhaven-5yd6d5.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -76,22 +77,49 @@
         background-position: center;
         background-repeat: no-repeat;
     }
+  
 }
-  .lists{
+.lists {
+    width: 330px;
+    height: 35px;
+    border: 1px solid brown;
+    border-radius: 15px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: none;
+    font-weight: bold;
+}
+.lists:hover {
+    box-shadow: 0 0 10px 0px brown;
+    cursor: pointer;
+    transform: translate(0.5px, 0.5px);
+}
+.lists:active{
+  color: wheat;
+  scale: 1.02;
+}
+
+  .listss{
     width: 330px;
     height: 35px;
     border: 1px solid orange;
     border-radius: 15px;
     margin-top: 2px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: row;
+    font-weight: bold;
 }
-.lists:hover{
+.listss:hover{
     box-shadow: 0 0 10px 0px orange;
     cursor: pointer;
     transform: translate(0.5px,0.5px);
-  
+}
+.listss:active{
+  scale: 1.02;
 }
 .listo{
   width: 330px;
@@ -122,6 +150,64 @@
 .hov2:hover{
     box-shadow: 0 0 40px 6px green;
 
+}
+
+@keyframes fall{
+  0%{top: 0; opacity: 1;}
+  100%{top:300px; opacity: 0;}
+}
+
+.forval{
+    width: 300px;
+    height: 50px;
+    background-color: red;
+    border-radius: 20px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    box-shadow: 0 0 20px 2px red;
+    top: 0;
+    animation: fall 5s linear;
+
+}
+.filter{
+    background: none;
+    border: 1px solid brown;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    flex-direction: row;
+    font-weight: bold;
+}
+.filter:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 brown;
+    transform: translate(0.2px,0.2px);
+}
+.filter:active{
+  scale: 1.01;
+}
+.filos{
+    background: none;
+    border: 1px solid brown;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    flex-direction: row;
+    font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+     .listss{
+      width: 320px;
+      height: 30px;
+      font-size: 2px;
+    }
 }
 </style>
 <body>

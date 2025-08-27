@@ -13,7 +13,10 @@
     <input #Email type="email" class="input" id="emaill" [(ngModel)]="email" placeholder="Enter email..." title="Enter your email!" required>
     <p #validation2 id="validation2" class="validation"></p>
     <p id="password" class="p">Password:</p>
+    <div id="tvalisa">
     <input #Password type="password" id="passwordi" class="input" [(ngModel)]="password" placeholder="Enter password..." title="Enter your password!" required>
+    <button class="tvali" id="tvss" (click)="tvalso()"></button>
+    </div>
     <p #validation3 id="validation3" class="validation"></p>
     <p id="donthave">Already have an account? <button id="signup" (click)="signupp()" #signup>Sign in</button></p>
     <p #validation4 id="validation4" class="validation"></p>
@@ -26,8 +29,12 @@
     <input type="text" id="user1" class="input" [(ngModel)]="useri" placeholder="Enter username..." title="Enter your username!" required>
     <p #validation6 id="validation6" class="validation"></p>
     <p id="passwd" class="p">Password:</p>
-    <input type="password" id="pass" class="input" [(ngModel)]="passi" maxlength="16" placeholder="Enter password..." title="Enter your passwprd!" required>
+    <div id="satvale">
+    <input #tvali type="password" id="pass" class="input" [(ngModel)]="passi" maxlength="16" placeholder="Enter password..." title="Enter your passwprd!" required>
+   <button id="tvali" class="tvali" (click)="tvals()"></button>
+  </div>
     <p #validation7 id="validation7" class="validation"></p>
+    <p id="forgott">Forgot password? <button #restrr (click)="restore()" id="button54">Restore</button></p>
     <p id="crateeacc">Dont have an account? <button #crateacc id="crateacc" (click)="sign()">Sign up</button> </p>
     <button #signin id="button3" class="button" (click)="Signin()">Sign in</button>
 </div>
@@ -39,8 +46,8 @@
     <p #validation5 id="validation5" class="validation"></p>
     <p id="cratenew">Crate new?<button #crate id="crate" (click)="cratee()">Crate</button></p>
     <p #validation12 id="validation12" class="validation"></p>
-    <button #button2 id="button2" (click)="Add()">Add</button>
-    <button id="button14" class="button" (click)="bako()"><</button>
+    <button #button2 id="button2v" (click)="Add()">Add</button>
+    <button id="button14v" class="button" (click)="bako()"><</button>
 </div>
 
 <div #idcrate id="idcrate">
@@ -68,46 +75,120 @@
 <div id="tlist">Lists</div>
 <div #todos id="todos">
 </div>
+<div id="kjm">
 <button #remove id="button16" (click)="removee()" class="button 16">❌ Remove list</button>
 <button #addmore id="button4" (click)="addnew()"  class="button">Add</button>
 </div>
+</div>
 
 <div #lists id="lists">
-<div id="tlistt">Tasks</div>
-<button id="button12" (click)="baki()" class="button"><</button>
+<div id="tlistt">Loans</div>
+<div #filter class="filter" (click)="appear()">
+  <p #fil>Filters</p>
+  <div #asd id="asd">
+<button id="uio"  class="butt" (click)="every()">All</button>
+<button class="butt" (click)="byme()">by me</button>
+<button class="butt" (click)="byname()">name</button>
+<button class="butt" (click)="datesss()">Dates</button>
+<button id="dudi" class="butt" (click)="dueda()">Duedate</button>
+<button class="butt" (click)="unpayed()">Unpaid</button>
+</div>
+</div>
 <div #todoss id="todo">
 </div>
-<button #addmore id="button7" (click)="Addtask()" class="button">Add task</button>
+<div id="muu">
+<button #button12 id="button12" (click)="baki()" class="button"><</button>
+<button #addmore id="button7" (click)="Addtask()" class="button">Add Loan</button>
+</div>
 </div>
 
 
 <div #cratetask id="cratetask">
-<div #crt id="crt">New task</div>
-<p  id="taskname">Task name:</p>
+<div #crt id="crt">New loan</div>
+<p  id="taskname">Lend to:</p>
 <input #taskname type="text" class="input" id="taskname" maxlength="15" placeholder="Enter task name..." [(ngModel)]="tasknamee" title="Enter task name!" required>
 <p #validation13 id="validation13" class="validation"></p>
-<p #tasktitl id="tasktitle">Task title:</p>
-<input #tasktitle type="text" class="input" id="tasktitle" maxlength="30" placeholder="Enter task title..." [(ngModel)]="tasktitlee" title="Enter task title!" required>
+<div #er id="er">
+<p #tasktitl id="tasktitle">Amount:</p><p id="ii">Currency:</p>
+</div>
+<div #tasamn id="tasamn">
+<input #tasktitle type="text" class="asav" class="input" id="tasktitle" (keydown)="allowOnlyNumbers($event)" inputmode="numeric" maxlength="10" placeholder="Enter task title..." [(ngModel)]="tasktitlee" title="Enter task title!" required>
+<p id="avv">/</p>
+<input type="text" maxlength="9" placeholder="currency..." title="Enter number!" required
+       class="input" id="maxusss" [(ngModel)]="curr">
+    </div>
 <p #validation14 id="validation14" class="validation"></p>
-<p id="taskdescc">Task description:</p>
-<input #taskdesc type="text" class="input" id="taskdesc" placeholder="Enter task description..." [(ngModel)]="taskdescription" title="Enter task description!" required>
+<p #validation24 id="validation24" class="validation"></p>
+<p #date id="date">Date:</p>
+<input class="input" [(ngModel)]="Date" type="datetime-local" id="dob" name="dob">
+<p #validation25 id="validation25" class="validation"></p>
+<p #date id="date">Due date:</p>
+<input class="input" [(ngModel)]="duedati" type="date" id="dob" name="dob">
+<p #validation26 id="validation26" class="validation"></p>
+<p id="taskdescc">Loan description:</p>
+<input #taskdesc type="text" class="input" id="taskdesc" placeholder="Enter task description..." [(ngModel)]="taskdescriptiion" title="Enter task description!" required>
 <p #validation15 id="validation15" class="validation"></p>
 <p #validation16 id="validation16" class="validation"></p>
 <div id="xazi"></div>
-<button id="button9" (click)="gobo()" class="button"><</button>
-<button #button8 id="button8" class="button" (click)="Addi()">Add</button>
+<button id="button9" (click)="gobo()" ><</button>
+<button #button8 id="button8"  (click)="Addi()">Add</button>
 </div>
 
 <div #task id="task">
-<div #takn id="takn"></div>
-<button id="button11" (click)="gob()" class="button"><</button>
-<div #taskde id="taskde">
-    <p #ttaknn id="ttaknn"></p>
-    <div #sataske id="sataske"></div>
+  <div #takn id="takn">
+    <button #button11 id="button11" (click)="gob()" class="button"><</button>
+    <span id="takn_text">Task</span>
+  </div>
+
+  <div #taskde id="taskde">
+    <p #ttaknn id="ttaknn">Task Details</p>
+
+    <div #sataske id="sataske">
+
+          <div id="row_lender">
+        <span id="label_lender">Lender:</span>
+        <span #lender id="lender"></span>
+      </div>
+      <div id="row_loaner">
+        <span id="label_loaner">Loaner:</span>
+        <span #loaner id="loaner">ddddddddddddddddd</span>
+      </div>
+
+      <div id="row_amount">
+        <span id="label_amount">Amount:</span>
+        <span #amount id="amount">ewr</span>
+      </div>
+
+      <div id="row_currency">
+        <span id="label_currency">Currency:</span>
+        <span #currency id="currency"></span>
+      </div>
+
+      <div id="row_datetime">
+        <span id="label_datetime">Date & Time:</span>
+        <span #datetime id="datetime"></span>
+      </div>
+
+      <div id="row_duedate">
+        <span id="label_duedate">Due Date:</span>
+        <span #duedate id="duedate"></span>
+      </div>
+
+       <div id="row_status">
+        <span id="label_status">status:</span>
+        <span #status id="status"></span>
+      </div>
+
+      
+    </div>
+  </div>
+  <p #validation17 id="validation17" class="validation"></p>
+  <div id="hj">
+  <button #button30 id="button30" (click)="det()">Loan description</button>
+  <button #button10 id="button10" (click)="completed()" class="button">Payed ✅</button>
 </div>
-<p #validation17 id="validation17" class="validation"></p>
-<button #button10 id="button10" (click)="completed()" class="button">Completed✅</button>
 </div>
+
 <div #yesno id="yesno">
     <p #usure id="usure">Are you sure you want to delete?'</p>
     <div id="butts">
@@ -118,12 +199,12 @@
 <div #userss id="userss">
     <p id="usiks">List users:</p>
     <div #usis id="usis"></div>
-    <button #button19 (click)="hide()" id="button19">Hide</button>
+    <button #button19 (click)="hide()" id="button199">Hide</button>
 </div>
 <button #button20 id="button20" (click)="show()">Show users</button>
 
 <div #saaide  id="saaide">
-<div id="iduu">Id:</div>
+<div id="iduu">Id <button id="daxuri" (click)="colo()"></button></div>
 <div #saaidee>3b039ced56524f75a7c5efcee1116277</div> 
 </div>
 
@@ -153,3 +234,226 @@
 </button>
 </div>
 
+<div #deski id="deski">
+        <span id="de"><p>Description</p></span>
+        <div id="konti">
+        <div #taskdescription id="taskdescription">asddddddddddddd</div>
+      </div>
+      <button #button27 id="button27" (click)="buk()"><</button>
+      </div>
+
+<div #filtri id="filtri">
+<p #na id="na">asd</p>
+<div>
+  <p #ca id="ca">asds</p>
+<input #inap type="text" class="input" id="filinp" [(ngModel)]="inpii">
+<p #validation30 id="validation30" class="validation"></p>
+</div>
+<div id="kod">
+<button id="button43" class="butt" (click)="ioa()"><</button>
+<button #sub id="sub" (click)="filtered()">Fliter</button>
+</div>
+</div>
+
+<div #opts id="opts">
+<p id="op"><button id="button44" class="butt" (click)="iva()"></button>Filter by me</p>
+<p id="ip">Choose filter option:</p>
+<div id="butis">
+  <button class="ds" id="all" (click)="al1()">All</button>
+  <button class="ds" id="lendds" (click)="lend1()">Lendings</button>
+  <button class="ds" id="loanns" (click)="loan1()">Loans</button>
+</div>
+</div>
+
+<div #dropd id="dropd">
+  <button #saode id="saode" (click)="daaide()">Id</button>
+  <button #button31 id="button31" (click)="optiis()"><></button>
+</div>
+
+<div #maio id="maio">
+  <div id="oplk">
+  <p id="opis">Options</p>
+  <button #button32 id="button32"(click)="bagh()"></button>
+</div>
+  <div #cont id="cont">
+    <div #finance class="finance" (click)="finanoi()">Dashboard</div>  
+    <div #finance class="finance" (click)="finan()">Transactions</div>
+    <div #finance class="finance" (click)="finani()">Currency table</div>
+    <div #finance class="finance" (click)="finano()">Calculator</div>  
+  </div>
+</div>
+
+<div #meall id="meall">
+<p id="meea">Choose option</p>
+<div #mealli id="mealli"> 
+  <button #alls id="alls" class="avb" (click)="allsi()">All</button>
+  <button #me class="avb" id="me" (click)="meess()">Me</button>
+</div>
+</div>
+
+<div #datees id="datees">
+<p id="chsd">Choose dates</p>
+<p id="Fro">From:</p>
+<input class="input" [(ngModel)]="date1" type="date" id="dob" name="dob1">
+<p #validation37 id="validation37" class="validation"></p>
+<p id="tooo">To:</p>
+<input class="input" [(ngModel)]="date2" type="date" id="dob" name="dobb">
+<p #validation38 id="validation38" class="validation"></p>
+<div id="hg">
+<button #button42 id="button42" class="butt" (click)="clp()"><</button>
+<button #button40 id="button40" (click)="fila()">Filter</button>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div #converts class="fxp-box">
+  <div class="fxp-head">
+    Currency Conversion
+     <button id="button43" #button43 (click)="gobi()"><</button>
+  </div>
+  <div class="fxp-row">
+    <label class="fxp-field">
+      <span class="fxp-label">Amount</span>
+      <input type="number" class="fxp-input" placeholder="e.g. 100.00" [(ngModel)]="ami">
+    </label>
+
+    <label class="fxp-field">
+  <span class="fxp-label">From</span>
+  <select class="fxp-select" [(ngModel)]="fromi">
+    <option *ngFor="let c of validCurrencies" [value]="c">{{ c }}</option>
+  </select>
+</label>
+
+<label class="fxp-field">
+  <span class="fxp-label">To</span>
+  <select class="fxp-select" [(ngModel)]="Tos">
+    <option *ngFor="let c of validCurrencies" [value]="c">{{ c }}</option>
+  </select>
+</label>
+<p #validation54 class="validation" id="vaio">* Empty field</p>
+  </div>
+  <div #tot id="tot"> 
+    <div #resulti id="resulti"></div>
+  </div>
+ 
+  <button type="button" class="fxp-btn" (click)="conver()">Convert</button>
+</div>
+
+<div #fulls id="fulls">
+  <p id="klk">Details</p>
+  <div #dethold id="dethold">
+    <div #safinanse class="safio" id="safinanze">
+      <p class="kjh">Total lendings</p>
+      <div #instots class="insisi" id="instots"></div>
+         <div class="r">
+        <span class="mf">Total:</span>
+         <span #totsss class="tots"></span>
+        </div>
+    </div>
+    <div #srulia class="safio" id="srulia">
+      <p class="kjh">Total loans</p>
+      <div #instoti id="insiso" class="insisi"></div>
+      <div class="r">
+        <span class="mf">Total:</span>
+         <span #totss class="tots"></span>
+        </div>
+    </div>
+  </div>
+  <div id="hsba">
+  <button #govisi class="govi" (click)="govi()"><</button>
+  <button #govoso id="goff" class="govi" (click)="govii()">Check Profit</button>
+</div>
+</div>
+
+<div #financ id="financ">
+  <p id="ttt"><button id="button46" class="butt" (click)="ivaa()"></button>Profits</p>
+<div id="checkss">
+  <div class="md" id="lendss">
+    <p id="lendssi" class="asa">Total:</p>
+    <div #lendsss class="opps" id="lendsss"></div>
+  </div>
+  <div class="md" id="loanss">
+    <p id="loanssi" class="asa">Total:</p>
+    <div #loansss class="opps" id="loansss"></div>
+  </div>
+</div>
+<div id="kll">
+  <div id="ims" class="profittaa">💵</div>
+<div class="profittaa" >
+  <p id="pofis">profit:</p>
+  <p #profitta id="pofa"></p>
+</div>
+  <div id="imn" class="profittaa">💵</div>
+</div>
+<div id="mmmn"></div>
+<div id="buttys">
+
+</div>
+</div>
+
+
+
+<div #case class="case">
+  <div class="screen">
+    <div class="scrini">{{ display || '0' }}</div>
+  </div>
+
+  <div class="buttons-grid">
+    <button class="btn op" (click)="clear()">C</button>
+    <button class="btn op" (click)="append('(')">(</button>
+    <button class="btn op" (click)="append(')')">)</button>
+    <button class="btn op" (click)="append('%')">%</button>
+
+    <button class="btn num" (click)="append('7')">7</button>
+    <button class="btn num" (click)="append('8')">8</button>
+    <button class="btn num" (click)="append('9')">9</button>
+    <button class="btn op" (click)="append('/')">/</button>
+
+    <button class="btn num" (click)="append('4')">4</button>
+    <button class="btn num" (click)="append('5')">5</button>
+    <button class="btn num" (click)="append('6')">6</button>
+    <button class="btn op" (click)="append('X')">X</button>
+
+    <button class="btn num" (click)="append('1')">1</button>
+    <button class="btn num" (click)="append('2')">2</button>
+    <button class="btn num" (click)="append('3')">3</button>
+    <button class="btn op" (click)="append('-')">-</button>
+
+    <button class="btn op" (click)="toggleSign()">+/-</button>
+    <button class="btn num" (click)="append('0')">0</button>
+    <button class="btn num" (click)="append('.')">.</button>
+    <button class="btn op" (click)="append('+')">+</button>
+
+    <button class="btn equal" (click)="calculate()">=</button>
+    <button class="btn erase" (click)="backspace()">⌫</button>
+  </div>
+</div>
+
+<div #authetic id="authetic">
+<p id="verif">Email verification <button id="cloppoo" (click)="cloiii()"></button></p>
+<p id="codl">Enter code:</p>
+<input type="text" id="texs" class="input" placeholder="Enter code..." [(ngModel)]="veric" required>
+<p #errx id="errx" class="validation"></p>
+<p id="instr">Code was sent on your email!<button #button51 id="button51" (click)="reset()">Send again</button></p>
+
+<button id="button52" (click)="dacheke()">Check</button>
+</div>
+
+<div #restpp id="restpp">
+  <p id="opse"> <button id="cloppo" (click)="cloii()"></button>Restore password</p>
+  <p id="opser">Enter email:</p>
+  <input id="inppo" type="text" class="input" placeholder="Enter email..." [(ngModel)]="restoree" required>
+  <p #validation44 id="validation44" class="validation"></p>
+  <button id="button52" (click)="checkrest()">Send</button>
+</div>
+
+<button #saode id="saode">Id</button>

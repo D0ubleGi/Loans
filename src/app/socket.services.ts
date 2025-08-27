@@ -1,6 +1,7 @@
 
 import { isPlatformBrowser } from '@angular/common';
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { EmailValidator } from '@angular/forms';
 import { max } from 'rxjs';
 import { io, Socket } from 'socket.io-client';
 
@@ -14,7 +15,7 @@ constructor(@Inject(PLATFORM_ID) private platformId: Object) {
   const savedName = this.isBrowser ? localStorage.getItem('name') : '';
   const savedPassword = this.isBrowser ? localStorage.getItem('password') : '';
 
-this.socket = io('https://list-backend-jzt8.onrender.com', {
+this.socket = io('https://beckend1-g67t.onrender.com', {
     transports: ['websocket', 'polling'],
   withCredentials: false,
   reconnectionAttempts: Infinity,
@@ -94,12 +95,12 @@ this.socket = io('https://list-backend-jzt8.onrender.com', {
       this.socket.emit('tasks',id);
     }
 
-    Addnew(idd:string,iddd:string,taskname:string,tasktitle:string,taskdesc:string,naxe:boolean){
-      this.socket.emit('addnew',idd,iddd,taskname,tasktitle,taskdesc,naxe);
+    Addnew(idd:string,iddd:string,user:string,loaner:string,amount:string,currecny:string,date:any,datee:any,taskdesc:string,status:string,naxe:boolean){
+      this.socket.emit('addnew',idd,iddd,user,loaner,amount,currecny,date,datee,taskdesc,status,naxe);
     }
-    onAddnew(callback: (rep:string,idd:string,iddd:string,taskname:string,tasktitle:string,taskdesc:string)=>void){
-      this.socket.on('rep',(rep:string,idd:string,iddd:string,taskname:string,tasktitle:string,taskdesc:string)=>{
-        callback(rep,idd,iddd,taskname,tasktitle,taskdesc);
+    onAddnew(callback: (rep:string,idd:string,iddd:string,user:string,loaner:string,amount:string,currecny:string,date:any,datee:any,taskdesc:string,status:string)=>void){
+      this.socket.on('rep',(rep:string,idd:string,iddd:string,user:string,loaner:string,amount:string,currecny:string,date:any,datee:any,taskdesc:string,status:string)=>{
+        callback(rep,idd,iddd,user,loaner,amount,currecny,date,datee,taskdesc,status);
       });
     }
     loadtasks(idd:string){
@@ -110,12 +111,12 @@ this.socket = io('https://list-backend-jzt8.onrender.com', {
         callback(taskunebi,ids);
       });
     }
-    completed(idd:string){
-      this.socket.emit('complete',idd);
+    completed(idd:string,name:string){
+      this.socket.emit('complete',idd,name);
     }
-    oncompleted(callback:(del:any)=>void){
-      this.socket.on('deleted',(del:any)=>{
-        callback(del);
+    oncompleted(callback:(del:any,dul:any)=>void){
+      this.socket.on('deleted',(del:any,dul:any)=>{
+        callback(del,dul);
       });
     }
       onloadtaskss(callback: (taskunebii:any)=>void){
@@ -161,6 +162,103 @@ this.socket = io('https://list-backend-jzt8.onrender.com', {
         callback(tas);
       });
     }
-}
 
+    filter(name:any,stat:string,id:string,st:string){
+      this.socket.emit('filter',name,stat,id,st);
+    }
+    filot(date1:string,date2:string,id:string,name:string,ss:string){
+      this.socket.emit('filterd',date1,date2,id,name,ss);
+    }
+    convert(am:string,fr:string,to:string){
+      this.socket.emit('convert',am,fr,to);
+    }
+    onconverted(callback: (result:string)=>void){
+      this.socket.on('converted',(result:string)=>{
+        callback(result);
+      });
+    }
+
+    finans(id:string,user:string){
+      this.socket.emit('lendfin',id,user);
+    }
+    finanse(id:string,loaner:string){
+      this.socket.emit('loanfin',id,loaner);
+    }
+    onfinans(callback:(haia:any)=>void){
+      this.socket.on('lendsfin',(haia:any)=>{
+        callback(haia);
+      });
+    }
+     onfinanse(callback:(haia:any)=>void){
+      this.socket.on('loandsfin',(haia:any)=>{
+        callback(haia);
+      });
+    }
+    total(haia:any){
+      this.socket.emit('totals',haia);
+    }
+    totals(haia:any){
+      this.socket.emit('totalss',haia);
+    }
+    ontotals(callback:(haia:number)=>void){
+    this.socket.on('totaled',(haia:number)=>{
+      callback(haia);
+    });
+    }
+    ontotalss(callback:(haia:number)=>void){
+    this.socket.on('totaledd',(haia:number)=>{
+      callback(haia);
+    });
+    }
+
+    sento(id:string,idd:string,user:string){
+      this.socket.emit('sento',id,idd,user);
+    }
+    onsento(callback: (user:string,loaner:string,currecny:string,amount:string,email:string)=>void){
+      this.socket.on('onseto',(user:string,loaner:string,currecny:string,amount:string,email:string)=>{
+        callback(user,loaner,currecny,amount,email);
+      });
+    }   
+
+    emaili(id:string,idd:string,user:string,loaner:string,amount:string,currency:string){
+      this.socket.emit('emaili',id,idd,user,loaner,amount,currency);
+    }
+    onemaili(callback:( id:string,idd:string,user:string,loaner:string,amount:string,currency:string,email:string)=>void){
+      this.socket.on('onemaili',( id:string,idd:string,user:string,loaner:string,amount:string,currency:string,email:string)=>{
+        callback(id,idd,user,loaner,amount,currency,email);
+      });
+}
+checkiti(name:string,code:number,username:string,email:string,password:string){
+  this.socket.emit('dacheke',name,code,username,email,password);
+}
+oncheckiti(callback: (code:string)=>void){
+  this.socket.on('onchecki',(code:string)=>{
+    callback(code);
+  });
+}
+adcodi(name:string,email:string,code:number){
+  this.socket.emit('dakode',name,email,code);
+}
+reset(name:string,email:string,code:number){
+  this.socket.emit('reset',name,email,code);
+}
+ondaaemail(callback:(email:string,name:string,code:number)=>void){
+  this.socket.on('daaemail',(email:string,name:string,code:number)=>{
+    callback(email,name,code);
+  });
+}
+cheemail(email:string){
+  this.socket.emit('cheemail',email);
+}
+oncheemail(callback: (res:string)=>void){
+this.socket.on('checkedemail',(res:string)=>{
+callback(res);
+});
+}
+sendee(callback:(email:string,user:string,pass:string)=>void){
+  this.socket.on('sendee',(email:string,user:string,pass:string)=>{
+    callback(email,user,pass);
+  });
+}
+}
 
