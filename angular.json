@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Todolist": {
+    "Loans": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "browser": "src/main.ts",
+            "outputPath": "dist/Loans",
             "polyfills": [
               "zone.js"
             ],
@@ -30,28 +30,27 @@
               "src/styles.css"
             ]
           },
-       "configurations": {
-  "production": {
-    "outputHashing": "all",
-"serviceWorker": "ngsw-config.json"
-  },
-  "development": {
-    "optimization": false,
-    "extractLicenses": false,
-    "sourceMap": true
-  }
-}
-,
+          "configurations": {
+            "production": {
+              "outputHashing": "all",
+              "serviceWorker": "ngsw-config.json"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
           "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Todolist:build:production"
+              "buildTarget": "Loans:build:production"
             },
             "development": {
-              "buildTarget": "Todolist:build:development"
+              "buildTarget": "Loans:build:development"
             }
           },
           "defaultConfiguration": "development"
