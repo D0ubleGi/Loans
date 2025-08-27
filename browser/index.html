@@ -1,0 +1,218 @@
+
+<!doctype html>
+<html lang="en" data-beasties-container>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <title>Todolist</title>
+  <base href="/Loans/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple and functional Todo List PWA">
+
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="icon" type="image/png" href="assets/images/to-do-list_3_5_optimized.png" sizes="192x192">
+  <link rel="shortcut icon" href="assets/images/to-do-list_3_5_optimized.png">
+
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/to-do-list_3_optimized.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="assets/images/to-do-list_3_1_optimized.png">
+  <link rel="apple-touch-icon" sizes="128x128" href="assets/images/to-do-list_3_2_optimized.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/to-do-list_3_3_optimized.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/to-do-list_3_4_optimized.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/to-do-list_3_7_optimized.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/images/to-do-list_3_5_optimized.png">
+  <link rel="apple-touch-icon" sizes="384x384" href="assets/images/to-do-list_3_6_optimized.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="assets/images/to-do-list_3_7_optimized.png">
+
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="assets/images/to-do-list_3_7_optimized.png">
+
+  <link rel="mask-icon" href="assets/images/to-do-list_3_5_optimized.png" color="#ff6600">
+
+  <meta name="apple-mobile-web-app-title" content="Todolist">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="theme-color" content="#ff6600">
+
+  <meta name="screen-orientation" content="portrait">
+<link rel="stylesheet" href="styles-5INURTSO.css"></head>
+
+
+<style>
+  html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+  body{
+    background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        background-image: url('./assets/images/wallhaven-5yd6d5.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        
+  }
+  @media (max-width: 600px) {
+    body {
+        background-color: black;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        min-height: 100vh;
+        width: 100%;
+        overflow-y: auto; 
+        padding: 10px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+  
+}
+.lists {
+    width: 330px;
+    height: 35px;
+    border: 1px solid brown;
+    border-radius: 15px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: none;
+    font-weight: bold;
+}
+.lists:hover {
+    box-shadow: 0 0 10px 0px brown;
+    cursor: pointer;
+    transform: translate(0.5px, 0.5px);
+}
+.lists:active{
+  color: wheat;
+  scale: 1.02;
+}
+
+  .listss{
+    width: 330px;
+    height: 35px;
+    border: 1px solid orange;
+    border-radius: 15px;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-weight: bold;
+}
+.listss:hover{
+    box-shadow: 0 0 10px 0px orange;
+    cursor: pointer;
+    transform: translate(0.5px,0.5px);
+}
+.listss:active{
+  scale: 1.02;
+}
+.listo{
+  width: 330px;
+    height: 35px;
+    border: 1px solid orange;
+    border-radius: 15px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: url('/assets/images/icons8-x-18.png') 0 0, auto;
+}
+.listo:hover{
+    box-shadow: 0 0 10px 0px orange;
+    cursor: pointer;
+    transform: translate(0.5px,0.5px);
+    
+}
+.hov1{
+  border: 1px solid red;
+}
+.hov1:hover{
+    box-shadow: 0 0 50px 3px red;
+}
+.hov2{
+  border: 1px solid green;
+}
+.hov2:hover{
+    box-shadow: 0 0 40px 6px green;
+
+}
+
+@keyframes fall{
+  0%{top: 0; opacity: 1;}
+  100%{top:300px; opacity: 0;}
+}
+
+.forval{
+    width: 300px;
+    height: 50px;
+    background-color: red;
+    border-radius: 20px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    box-shadow: 0 0 20px 2px red;
+    top: 0;
+    animation: fall 5s linear;
+
+}
+.filter{
+    background: none;
+    border: 1px solid brown;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    flex-direction: row;
+    font-weight: bold;
+}
+.filter:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 brown;
+    transform: translate(0.2px,0.2px);
+}
+.filter:active{
+  scale: 1.01;
+}
+.filos{
+    background: none;
+    border: 1px solid brown;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    flex-direction: row;
+    font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+     .listss{
+      width: 320px;
+      height: 30px;
+      font-size: 2px;
+    }
+}
+</style>
+<body>
+ 
+  <app-root></app-root>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-N3H44DFB.js" type="module"></script></body>
+</html>

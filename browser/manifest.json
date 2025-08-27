@@ -1,0 +1,21 @@
+{
+  "name": "Todolist",
+  "short_name": "Todolist",
+  "description": "A simple and functional Todo List app",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "background_color": "#ffffff",
+  "theme_color": "#ff6600",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "assets/images/to-do-list_3_optimized.png", "sizes": "72x72", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/images/to-do-list_3_1_optimized.png", "sizes": "96x96", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/images/to-do-list_3_2_optimized.png", "sizes": "128x128", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/images/to-do-list_3_3_optimized.png", "sizes": "144x144", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/images/to-do-list_3_4_optimized.png", "sizes": "152x152", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/images/to-do-list_3_5_optimized.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/images/to-do-list_3_6_optimized.png", "sizes": "384x384", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/images/to-do-list_3_7_optimized.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

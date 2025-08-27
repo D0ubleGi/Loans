@@ -1,0 +1,113 @@
+{
+  "configVersion": 1,
+  "timestamp": 1756303466932,
+  "index": "/Loans/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/Loans/favicon.ico",
+        "/Loans/index.html",
+        "/Loans/main-N3H44DFB.js",
+        "/Loans/polyfills-B6TNHZQ6.js",
+        "/Loans/styles-5INURTSO.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/Loans/apple-touch-icon.png",
+        "/Loans/assets/images/computer.png",
+        "/Loans/assets/images/cross.png",
+        "/Loans/assets/images/eye (1).png",
+        "/Loans/assets/images/eye.png",
+        "/Loans/assets/images/icons8-online-store-24.png",
+        "/Loans/assets/images/icons8-x-18.png",
+        "/Loans/assets/images/kmlk.jpg",
+        "/Loans/assets/images/target.png",
+        "/Loans/assets/images/to-do-list (3).png",
+        "/Loans/assets/images/to-do-list_3_1_optimized.png",
+        "/Loans/assets/images/to-do-list_3_2_optimized.png",
+        "/Loans/assets/images/to-do-list_3_3_optimized.png",
+        "/Loans/assets/images/to-do-list_3_4_optimized.png",
+        "/Loans/assets/images/to-do-list_3_5_optimized.png",
+        "/Loans/assets/images/to-do-list_3_6_optimized.png",
+        "/Loans/assets/images/to-do-list_3_7_optimized.png",
+        "/Loans/assets/images/to-do-list_3_optimized.png",
+        "/Loans/assets/images/wallhaven-5yd6d5.png",
+        "/Loans/favicon-96x96.png",
+        "/Loans/favicon.svg",
+        "/Loans/media/cross-VBCKXK76.png",
+        "/Loans/media/eye-EXH6G2WN.png",
+        "/Loans/media/icons8-x-18-J7X5EPBS.png",
+        "/Loans/web-app-manifest-192x192.png",
+        "/Loans/web-app-manifest-512x512.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/Loans/apple-touch-icon.png": "717f8fae50a8d34c02977df606af9bdf6d5e69f4",
+    "/Loans/assets/images/computer.png": "6e41c493df9a282b4b99b282faf111d821a074a6",
+    "/Loans/assets/images/cross.png": "da159d8021f8162488222bc0168125a1c5a5a0c6",
+    "/Loans/assets/images/eye (1).png": "c469edf122aac7fb1c6ab6701efac7be923c09ed",
+    "/Loans/assets/images/eye.png": "72925dbc69a6c6a9fb668da44ede015b2c16f112",
+    "/Loans/assets/images/icons8-online-store-24.png": "f5248e739209dc3b0a8fc68badb2c3f29f8335cd",
+    "/Loans/assets/images/icons8-x-18.png": "df9da391f8c30cebc9052837bb43ba70c0259b3c",
+    "/Loans/assets/images/kmlk.jpg": "58741744312400b844ba063d5a3ea93ea2c45e33",
+    "/Loans/assets/images/target.png": "48667851473831795eff4648e5215a3de0a9198e",
+    "/Loans/assets/images/to-do-list (3).png": "650405240ae7dca0b92eb44f9d82cb6c7940403c",
+    "/Loans/assets/images/to-do-list_3_1_optimized.png": "7f059c93ba8d88420b88efc91b8b0a4fd4ac07ad",
+    "/Loans/assets/images/to-do-list_3_2_optimized.png": "f76ca19765d871e34c9cd1735f7e37e999e04087",
+    "/Loans/assets/images/to-do-list_3_3_optimized.png": "fcecb72daccd3d21f63f123e7b066d0fcd7f1362",
+    "/Loans/assets/images/to-do-list_3_4_optimized.png": "18ac61ed7e1f161e80f9aa893a2eea107206537c",
+    "/Loans/assets/images/to-do-list_3_5_optimized.png": "65e3376c7a36b76ff0d92333dca2c347913c8a6e",
+    "/Loans/assets/images/to-do-list_3_6_optimized.png": "cef64a2a8985c630fd9b8176dbca775c303e74c9",
+    "/Loans/assets/images/to-do-list_3_7_optimized.png": "151eadcc20cc86d5e46d376609a7b94e8ed46c8d",
+    "/Loans/assets/images/to-do-list_3_optimized.png": "39e8aaa8ce641ec48ee1b26d5b716ea231e148ed",
+    "/Loans/assets/images/wallhaven-5yd6d5.png": "9b332f454b9bc8dcdbff42ac9bdad0969b0f9b23",
+    "/Loans/favicon-96x96.png": "398b8d47dcd45c7f05991b31f0da981dc0cf14df",
+    "/Loans/favicon.ico": "095c21a87350b39cb4543ba357015b424a94b0e0",
+    "/Loans/favicon.svg": "7c3a839bbda4d6e484b8b9f757b6e71c827bda81",
+    "/Loans/index.html": "f612008673d8f55e7814769d425e7d0efa97ab58",
+    "/Loans/main-N3H44DFB.js": "6537a16cd99b191238edbe456021c305f16bc63d",
+    "/Loans/media/cross-VBCKXK76.png": "da159d8021f8162488222bc0168125a1c5a5a0c6",
+    "/Loans/media/eye-EXH6G2WN.png": "72925dbc69a6c6a9fb668da44ede015b2c16f112",
+    "/Loans/media/icons8-x-18-J7X5EPBS.png": "df9da391f8c30cebc9052837bb43ba70c0259b3c",
+    "/Loans/polyfills-B6TNHZQ6.js": "bf76ac291d7f51c1139b7edcf86b359a30c08c64",
+    "/Loans/styles-5INURTSO.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "/Loans/web-app-manifest-192x192.png": "b4f601a664ac166b5d3ee377192d2ab7ad3aeeb0",
+    "/Loans/web-app-manifest-512x512.png": "c55f83f9c22d265282a69eae9c9a338ae4a0f91c"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
